@@ -286,7 +286,7 @@ namespace AgilePMC.Controllers
 
                     }
 
-                    var path = Directory.GetCurrentDirectory() + "/Uploads/" + FileName;
+                    var path = "http://183.83.189.215:11356/Uploads/" + FileName;
 
                     var fileDetails = new
                     {
