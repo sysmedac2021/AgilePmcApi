@@ -12,6 +12,55 @@ namespace AgilePMC.Services
             _db = db;
         }
 
+        public ResponseObj<object> DashBoard(DateTime? selectRange, DateTime? fromDate, DateTime? toDate)
+        {
+            var responseObj = new ResponseObj<object>();
+            try
+            {
+                var newsLetter = _db.NewsLetters.ToList();
+                var slider = _db.Sliders.ToList();
+                var contactUs = _db.ContactUs.ToList();
+
+                if (selectRange != null)
+                {
+                     newsLetter = _db.NewsLetters.Where(x => x.CreateAt >= selectRange).ToList();
+                     slider = _db.Sliders.Where(x => x.CreateAt >= selectRange).ToList();
+                     contactUs = _db.ContactUs.Where(x => x.CreatedAt >= selectRange).ToList();
+                }
+                else if (fromDate != null && toDate != null)
+                {
+                     newsLetter = _db.NewsLetters.Where(x => x.CreateAt >= fromDate && x.CreateAt <= toDate).ToList();
+                     slider = _db.Sliders.Where(x => x.CreateAt >= fromDate && x.CreateAt <= toDate).ToList();
+                     contactUs = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.CreatedAt <= toDate).ToList();
+                }
+                else if (fromDate != null)
+                {
+                     newsLetter = _db.NewsLetters.Where(x => x.CreateAt >= fromDate).ToList();
+                     slider = _db.Sliders.Where(x => x.CreateAt >= fromDate).ToList();
+                     contactUs = _db.ContactUs.Where(x => x.CreatedAt >= fromDate).ToList();
+                }
+
+                var result = new
+                {
+                    NewsletterCount = newsLetter.Count > 0 ? newsLetter.Count : 0,
+                    SlidersCount = slider.Count > 0 ? slider.Count : 0,
+                    ContactUsCount = contactUs.Count > 0 ? contactUs.Count : 0,
+                };
+
+                    responseObj.responseCode = 200;
+                    responseObj.isSuccess = true;
+                    responseObj.data = result;
+                    return responseObj;
+
+                
+            }
+            catch (Exception ex)
+            {
+                responseObj.responseCode = 500; responseObj.isSuccess = false; responseObj.data = ex.Message;
+                return responseObj;
+            }
+        }
+
         public ResponseObj<object> InsertOrUpdateSlider(SliderReq request)
         {
             var responseObj = new ResponseObj<object>();

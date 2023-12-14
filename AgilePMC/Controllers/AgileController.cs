@@ -17,6 +17,35 @@ namespace AgilePMC.Controllers
             _agileService = new AgileService(db);
         }
 
+        [HttpGet]
+        [Route("api/Agile/GetDashboardCounts")]
+        public async Task<object> GetDashboardCounts(DateTime? selectRange, DateTime? fromDate, DateTime? toDate)
+        {
+            try
+            {
+                var response = await Task.FromResult(_agileService.DashBoard(selectRange, fromDate, toDate));
+
+                return new
+                {
+                    issuccess = true,
+                    time = DateTime.Now,
+                    data = response
+
+                };
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                return new
+                {
+                    status = "Error",
+                    time = DateTime.Now,
+                    data = ex.Message,
+                    data2 = ex.StackTrace
+                };
+            }
+        }
+
         [HttpPost]
         [Route("api/Agile/InsertOrUpdateSlider")]
         public async Task<object> InsertOrUpdateSlider(SliderReq request)
