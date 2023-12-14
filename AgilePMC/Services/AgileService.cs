@@ -213,7 +213,8 @@ namespace AgilePMC.Services
                                        x.Description,
                                        x.SliderName,
                                        x.SliderId,
-                                       x.EffectiveFrom,
+                                        x.Status,
+                                        x.EffectiveFrom,
                                        x.EffectiveTo,
                                        x.CreatedBy,
                                        x.UpdatedBy,
@@ -249,6 +250,7 @@ namespace AgilePMC.Services
                                   x.SliderImageUrl,
                                   x.Description,
                                   x.SliderName,
+                                  x.Status,
                                   x.SliderId,
                                   x.EffectiveFrom,
                                   x.EffectiveTo,
@@ -286,6 +288,7 @@ namespace AgilePMC.Services
                               {
                                   x.TemplateImageUrl,
                                   x.Message,
+                                  x.Status,
                                   x.Name,
                                   x.NewsLetterId,
                                   x.EffectiveFrom,
@@ -322,6 +325,7 @@ namespace AgilePMC.Services
                               select new
                               {
                                   x.TemplateImageUrl,
+                                  x.Status,
                                   x.Message,
                                   x.Name,
                                   x.NewsLetterId,
