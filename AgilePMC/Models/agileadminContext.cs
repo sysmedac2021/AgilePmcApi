@@ -20,6 +20,7 @@ namespace AgilePMC.Models
         public virtual DbSet<ContactU> ContactUs { get; set; } = null!;
         public virtual DbSet<NewsLetter> NewsLetters { get; set; } = null!;
         public virtual DbSet<Slider> Sliders { get; set; } = null!;
+        public virtual DbSet<SmtpDetail> SmtpDetails { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -146,6 +147,31 @@ namespace AgilePMC.Models
                 entity.Property(e => e.UpdateAt).HasColumnType("datetime");
 
                 entity.Property(e => e.UpdatedBy).HasColumnType("bigint(20)");
+            });
+
+            modelBuilder.Entity<SmtpDetail>(entity =>
+            {
+                entity.ToTable("SMTP_Details");
+
+                entity.Property(e => e.SmtpDetailId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("SMTP_Detail_Id");
+
+                entity.Property(e => e.SmtpDomainName)
+                    .HasMaxLength(250)
+                    .HasColumnName("SMTP_Domain_Name");
+
+                entity.Property(e => e.SmtpPassword)
+                    .HasMaxLength(250)
+                    .HasColumnName("SMTP_Password");
+
+                entity.Property(e => e.SmtpPort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("SMTP_Port");
+
+                entity.Property(e => e.SmtpUserEmail)
+                    .HasMaxLength(250)
+                    .HasColumnName("SMTP_User_Email");
             });
 
             OnModelCreatingPartial(modelBuilder);

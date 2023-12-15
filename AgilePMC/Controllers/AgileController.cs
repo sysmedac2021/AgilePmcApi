@@ -74,6 +74,35 @@ namespace AgilePMC.Controllers
         }
 
         [HttpPost]
+        [Route("api/Agile/DownloadNotification")]
+        public async Task<object> DownloadNotification(DownloadReq request)
+        {
+            try
+            {
+                var response = await Task.FromResult(_agileService.DownloadNotificationMail(request));
+
+                return new
+                {
+                    issuccess = true,
+                    time = DateTime.Now,
+                    data = response
+
+                };
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                return new
+                {
+                    status = "Error",
+                    time = DateTime.Now,
+                    data = ex.Message,
+                    data2 = ex.StackTrace
+                };
+            }
+        }
+
+        [HttpPost]
         [Route("api/Agile/InsertOrUpdateNewsletter")]
         public async Task<object> InsertOrUpdateNewsletter(NewsLetterReq request)
         {

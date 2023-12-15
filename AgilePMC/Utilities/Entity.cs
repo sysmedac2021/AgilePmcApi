@@ -59,5 +59,11 @@
             public string? Status { get; set; }
         }
 
+        public class DownloadReq
+        {
+            public string? Email { get; set; }
+            public string? MobileNumber { get; set; }
+        }
+
     }
 }
