@@ -256,9 +256,20 @@ namespace AgilePMC.Services
             var responseObj = new ResponseObj<object>();
             try
             {
+                DateTime now = DateTime.Now;
+                DateTime dateOnly = now.Date;
+                var date = dateOnly.ToString("yyyy-MM-dd");
+                TimeSpan timeOnly = now.TimeOfDay;
+                var hours = timeOnly.Hours;
+                var minutes = timeOnly.Minutes;
+                var seconds = timeOnly.Seconds;
+                var time = hours + ":" + minutes + ":" + seconds;
+                string timenew = date + " " + time;
+                DateTime times = Convert.ToDateTime(timenew);
+
                 var slider = (from x in _db.Sliders
-                              where x.EffectiveFrom >= DateTime.Now && x.EffectiveTo <= DateTime.Now
-                                    select new
+                              where x.EffectiveFrom <= times && x.EffectiveTo >= times
+                              select new
                                     {
                                        x.SliderImageUrl,
                                        x.Description,
@@ -330,11 +341,22 @@ namespace AgilePMC.Services
 
         public ResponseObj<object> GetAllCurrentNewsletter()
         {
+            DateTime now = DateTime.Now;
+            DateTime dateOnly = now.Date;
+            var date = dateOnly.ToString("yyyy-MM-dd");
+            TimeSpan timeOnly = now.TimeOfDay;
+            var hours = timeOnly.Hours;
+            var minutes = timeOnly.Minutes;
+            var seconds = timeOnly.Seconds;
+            var time = hours + ":" + minutes + ":" + seconds;
+            string timenew = date + " " + time;
+            DateTime times = Convert.ToDateTime(timenew);
+
             var responseObj = new ResponseObj<object>();
             try
             {
                 var letter = (from x in _db.NewsLetters
-                              where x.EffectiveFrom >= DateTime.Now && x.EffectiveTo <= DateTime.Now
+                              where x.EffectiveFrom <= times && x.EffectiveTo >= times
                               select new
                               {
                                   x.TemplateImageUrl,
