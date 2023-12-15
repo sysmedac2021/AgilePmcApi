@@ -500,7 +500,7 @@ namespace AgilePMC.Services
                         </style>
                         </head>
                         <body class=""header"">
-                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        You have received a new association enquiry with the following details,</p>
                         <p class=""position"">Organization Name : " + request.OrganizationName + @".</p>
@@ -571,7 +571,7 @@ namespace AgilePMC.Services
 </style>
 </head>
 <body class=""header"">
-<img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+<img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
 <p class=""position"">Dear " + request.ContactName + @",</p>
 <p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -638,7 +638,7 @@ namespace AgilePMC.Services
                         </style>
                         </head>
                         <body class=""header"">
-                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        You have received a new enquiry with the following details,</p>
                         <p class=""position"">Contact Name & Designation : " + request.ContactName + @".</p>
@@ -703,7 +703,7 @@ namespace AgilePMC.Services
 </style>
 </head>
 <body class=""header"">
-<img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+<img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
 <p class=""position"">Dear " + request.ContactName + @",</p>
 <p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -768,7 +768,7 @@ namespace AgilePMC.Services
                         </style>
                         </head>
                         <body class=""header"">
-                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        You have received a new  Career apllication with the following details,</p>
                         <p class=""position"">First Name : " + request.FirstName + @".</p>
@@ -838,7 +838,7 @@ namespace AgilePMC.Services
 </style>
 </head>
 <body class=""header"">
-<img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+<img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
 <p class=""position"">Dear " + request.FirstName + @",</p>
 <p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -940,7 +940,7 @@ namespace AgilePMC.Services
                         </style>
                         </head>
                         <body class=""header"">
-                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        New brocher download with the following details,</p>
                         <p class=""position"">Name : " + request.Name + @".</p>
@@ -1002,7 +1002,7 @@ namespace AgilePMC.Services
 </style>
 </head>
 <body class=""header"">
-<img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+<img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
 <p class=""position"">Dear " + request.Name + @",</p>
 <p class=""position"">Thanks for downloading the Brochure, Please contact us for more details.</p>
 <p class=""position"">Thanks and Regards,</p>

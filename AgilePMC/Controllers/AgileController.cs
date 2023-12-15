@@ -344,7 +344,7 @@ namespace AgilePMC.Controllers
 
                     }
 
-                    var path = "http://68.178.168.248:11458/Uploads/" + FileName;
+                    var path = "https://agileapi.sysmedac.com/Uploads/" + FileName;
 
                     var fileDetails = new
                     {
