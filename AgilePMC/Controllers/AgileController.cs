@@ -344,7 +344,7 @@ namespace AgilePMC.Controllers
 
                     }
 
-                    var path = "http://183.83.189.215:11356/Uploads/" + FileName;
+                    var path = "http://68.178.168.248:11458/Uploads/" + FileName;
 
                     var fileDetails = new
                     {

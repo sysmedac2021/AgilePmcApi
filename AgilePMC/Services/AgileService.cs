@@ -451,85 +451,77 @@ namespace AgilePMC.Services
 
                     if (request.ContactUsType == "ForAssociation")
                     {
-                        // for Agile PMC
-
-                        //                        MailMessage mailMsg = new MailMessage();
-                        //                        // From
-                        //                        MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
-                        //                        mailMsg.From = mailAddress;
-                        //                        // Subject and Body
-                        //                        mailMsg.Subject = "New Associatiion Enquiry.";
+                      //  for Agile PMC
 
 
-                        //                        string mailcon = @"<!DOCTYPE html>
-                        //<html>
-                        //<head>
-                        //<title>Reset Password</title>
-                        //<style> 
-                        //.header{text-align:center;}
-                        //.position{text-align: justify;}
-                        //.code{background-color:#ececec;padding:9px;}
-                        //.img-socialmedia{width:24px;}
-                        //.footer{background-color:black;padding-top:3px;padding-bottom:3px;}
-                        //.text{color:white;}
-                        //.text1{border-bottom:1px solid white;color:white;}
-                        //.socialmedia{margin-bottom:35px;}
-                        //</style>
-                        //</head>
-                        //<body class=""header"">
-                        //<img src=""https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/WTMU_Header_logo_eng-V2.png""/>
-                        //<div class=""banner""> 
-                        //<img src=""https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/ResetPasswordBanner.png""/>
-                        //</div>
-                        //<p class=""header"">Reset Password</p>
-                        //<p class=""position"">Hello,</p>
-                        //<p class=""position"">We have sent you this email in response to your request to reset your passsword. Please copy the code and update your password</p>
-                        //<div class=""code""> 
-                        //<h4>code:" + "" + @"</h4>
-                        //</div>
-                        //<p class=""position"">If this email is not intended to you please ignore and delete it.<br>
-                        //Thankyou for understanding.</p>
-                        //<p class=""position"">Thanks and Regards,</p>
-                        //<h5 class=""position"">Tamil Music University Team</h5>
-                        //<div class=""socialmedia"">
-                        //<span>Follow us on: </span>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/FB.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Instagram.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Youtube.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Linkedin.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Twitter.png""/>
-                        //</div>
-                        //<div class=""footer""> 
-                        //<p class=""text1""> Contact us: +1-703-880-6765</p>
-                        //<p class=""text""> Washington DC,Metropolitan Region, USA.</p>
-                        //<p class=""text""> 2023 World Tamil Music University-All Rights Reserved. </p>
-                        //</div>
-                        //</body>
-                        //</html>";
+                        MailMessage mailMsg = new MailMessage();
+                        // From
+                        MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
+                        mailMsg.From = mailAddress;
+                        // Subject and Body
+                        mailMsg.Subject = "New Associatiion Enquiry.";
 
-                        //                        mailMsg.Body = mailcon;
-                        //                        mailMsg.To.Add(request.Email);
-                        //                        //  mailMsg.To.Add("pratheeshbibin1999@gmail.com");
 
-                        //                        mailMsg.IsBodyHtml = true;
-                        //                        SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
-                        //                        System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
-                        //                        emailClient.Credentials = credentials;
-                        //                        emailClient.EnableSsl = true; // Enable SSL for secure communication
-                        //                                                      // Add the following line to enable STARTTLS
-                        //                        emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        string mailcon = @"<!DOCTYPE html>
+                        <html>
+                        <head>
+                        <title>Reset Password</title>
+                        <style> 
+                        .header{text-align:center;}
+                        .position{text-align: justify;}
+                        .code{background-color:#ececec;padding:9px;}
+                        .img-socialmedia{width:24px;}
+                        .footer{background-color:black;padding-top:3px;padding-bottom:3px;}
+                        .text{color:white;}
+                        .text1{border-bottom:1px solid white;color:white;}
+                        .socialmedia{margin-bottom:35px;}
+                        </style>
+                        </head>
+                        <body class=""header"">
+                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <p class=""position"">Dear Agile PMC,</p>
+                        <p class=""position"">        You have received a new association enquiry with the following details,</p>
+                        <p class=""position"">Organization Name : " + request.OrganizationName + @".</p>
+                        <p class=""position"">Organization Type : " + request.OrganizationType + @".</p>
+                        <p class=""position"">Association For : " + request.AssociateFor + @".</p>
+                        <p class=""position"">Business Profile Brief : " + request.BusinessProfille + @".</p>
+                        <p class=""position"">Website : " + request.Website + @".</p>
+                        <p class=""position"">Contact Name & Designation : " + request.ContactName + @".</p>
+                        <p class=""position"">Address : " + request.Address + @".</p>
+                        <p class=""position"">Phone Number : " + request.PhoneNumber + @".</p>
+                        <p class=""position"">Email Address : " + request.Email + @".</p>
+                        <p class=""position"">Message  : " + request.Message + @".</p>
+                        <br>
+                        <p class=""position"">Regards,</p>
+                        <p  class=""position"">
+                        <a href=https://agilepmc.com/>https://agilepmc.com/>
+                        </p>
+                        </body>
+                        </html>";
 
-                        //                        var Msg = "";
-                        //                        try
-                        //                        {
-                        //                            emailClient.Send(mailMsg);
-                        //                            Msg = "Successs";
-                        //                        }
-                        //                        catch (Exception ex)
-                        //                        {
-                        //                            string register = ex.ToString();
-                        //                            Msg = "Faliure";
-                        //                        }
+                        mailMsg.Body = mailcon;
+                       // mailMsg.To.Add(request.Email);
+                          mailMsg.To.Add("michel.charles@sysmedac.com");
+
+                        mailMsg.IsBodyHtml = true;
+                        SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
+                        System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
+                        emailClient.Credentials = credentials;
+                        emailClient.EnableSsl = true; // Enable SSL for secure communication
+                                                      // Add the following line to enable STARTTLS
+                        emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                        var Msg = "";
+                        try
+                        {
+                            emailClient.Send(mailMsg);
+                            Msg = "Successs";
+                        }
+                        catch (Exception ex)
+                        {
+                            string register = ex.ToString();
+                            Msg = "Faliure";
+                        }
 
                         // for visitors
 
@@ -570,7 +562,7 @@ namespace AgilePMC.Services
 
                         mailMsg1.Body = mailcon1;
                         //  mailMsg1.To.Add(request.Email);
-                        mailMsg1.To.Add("pratheeshbibin1999@gmail.com");
+                        mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg1.IsBodyHtml = true;
                         SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -597,83 +589,71 @@ namespace AgilePMC.Services
                     else if (request.ContactUsType == "ForEnquires")
                     {
 
-                        //                        MailMessage mailMsg = new MailMessage();
-                        //                        // From
-                        //                        MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
-                        //                        mailMsg.From = mailAddress;
-                        //                        // Subject and Body
-                        //                        mailMsg.Subject = "New Associatiion Enquiry.";
+                        //  for Agile PMC
 
 
-                        //                        string mailcon = @"<!DOCTYPE html>
-                        //<html>
-                        //<head>
-                        //<title>Reset Password</title>
-                        //<style> 
-                        //.header{text-align:center;}
-                        //.position{text-align: justify;}
-                        //.code{background-color:#ececec;padding:9px;}
-                        //.img-socialmedia{width:24px;}
-                        //.footer{background-color:black;padding-top:3px;padding-bottom:3px;}
-                        //.text{color:white;}
-                        //.text1{border-bottom:1px solid white;color:white;}
-                        //.socialmedia{margin-bottom:35px;}
-                        //</style>
-                        //</head>
-                        //<body class=""header"">
-                        //<img src=""https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/WTMU_Header_logo_eng-V2.png""/>
-                        //<div class=""banner""> 
-                        //<img src=""https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/ResetPasswordBanner.png""/>
-                        //</div>
-                        //<p class=""header"">Reset Password</p>
-                        //<p class=""position"">Hello,</p>
-                        //<p class=""position"">We have sent you this email in response to your request to reset your passsword. Please copy the code and update your password</p>
-                        //<div class=""code""> 
-                        //<h4>code:" + "" + @"</h4>
-                        //</div>
-                        //<p class=""position"">If this email is not intended to you please ignore and delete it.<br>
-                        //Thankyou for understanding.</p>
-                        //<p class=""position"">Thanks and Regards,</p>
-                        //<h5 class=""position"">Tamil Music University Team</h5>
-                        //<div class=""socialmedia"">
-                        //<span>Follow us on: </span>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/FB.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Instagram.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Youtube.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Linkedin.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Twitter.png""/>
-                        //</div>
-                        //<div class=""footer""> 
-                        //<p class=""text1""> Contact us: +1-703-880-6765</p>
-                        //<p class=""text""> Washington DC,Metropolitan Region, USA.</p>
-                        //<p class=""text""> 2023 World Tamil Music University-All Rights Reserved. </p>
-                        //</div>
-                        //</body>
-                        //</html>";
+                        MailMessage mailMsg = new MailMessage();
+                        // From
+                        MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
+                        mailMsg.From = mailAddress;
+                        // Subject and Body
+                        mailMsg.Subject = "New Enquiry.";
 
-                        //                        mailMsg.Body = mailcon;
-                        //                        mailMsg.To.Add(request.Email);
-                        //                        //  mailMsg.To.Add("pratheeshbibin1999@gmail.com");
 
-                        //                        mailMsg.IsBodyHtml = true;
-                        //                        SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
-                        //                        System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
-                        //                        emailClient.Credentials = credentials;
-                        //                        emailClient.EnableSsl = true; // Enable SSL for secure communication
-                        //                                                      // Add the following line to enable STARTTLS
-                        //                        emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        string mailcon = @"<!DOCTYPE html>
+                        <html>
+                        <head>
+                        <title>Reset Password</title>
+                        <style> 
+                        .header{text-align:center;}
+                        .position{text-align: justify;}
+                        .code{background-color:#ececec;padding:9px;}
+                        .img-socialmedia{width:24px;}
+                        .footer{background-color:black;padding-top:3px;padding-bottom:3px;}
+                        .text{color:white;}
+                        .text1{border-bottom:1px solid white;color:white;}
+                        .socialmedia{margin-bottom:35px;}
+                        </style>
+                        </head>
+                        <body class=""header"">
+                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <p class=""position"">Dear Agile PMC,</p>
+                        <p class=""position"">        You have received a new enquiry with the following details,</p>
+                        <p class=""position"">Contact Name & Designation : " + request.ContactName + @".</p>
+                        <p class=""position"">Phone Number : " + request.PhoneNumber + @".</p>
+                        <p class=""position"">Email Address : " + request.Email + @".</p>
+                        <p class=""position"">Message  : " + request.Message + @".</p>
+                        <br>
+                        <p class=""position"">Regards,</p>
+                        <p  class=""position"">
+                        <a href=https://agilepmc.com/>https://agilepmc.com/>
+                        </p>
+                        </body>
+                        </html>";
 
-                        //                        var Msg = "";
-                        //                        try
-                        //                        {
-                        //                            emailClient.Send(mailMsg);
-                        //                            Msg = "Successs";
-                        //                        }
-                        //                        catch (Exception ex)
-                        //                        {
-                        //                            string register = ex.ToString();
-                        //                            Msg = "Faliure";
-                        //                        }
+                        mailMsg.Body = mailcon;
+                        // mailMsg.To.Add(request.Email);
+                        mailMsg.To.Add("michel.charles@sysmedac.com");
+
+                        mailMsg.IsBodyHtml = true;
+                        SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
+                        System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
+                        emailClient.Credentials = credentials;
+                        emailClient.EnableSsl = true; // Enable SSL for secure communication
+                                                      // Add the following line to enable STARTTLS
+                        emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                        var Msg = "";
+                        try
+                        {
+                            emailClient.Send(mailMsg);
+                            Msg = "Successs";
+                        }
+                        catch (Exception ex)
+                        {
+                            string register = ex.ToString();
+                            Msg = "Faliure";
+                        }
 
                         //                        // for visitors
 
@@ -714,7 +694,7 @@ namespace AgilePMC.Services
 
                         mailMsg1.Body = mailcon1;
                         //  mailMsg1.To.Add(request.Email);
-                        mailMsg1.To.Add("pratheeshbibin1999@gmail.com");
+                        mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg1.IsBodyHtml = true;
                         SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -739,83 +719,76 @@ namespace AgilePMC.Services
                     }
                     else if (request.ContactUsType == "ForCareers")
                     {
-                        //                        MailMessage mailMsg = new MailMessage();
-                        //                        // From
-                        //                        MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
-                        //                        mailMsg.From = mailAddress;
-                        //                        // Subject and Body
-                        //                        mailMsg.Subject = "New Associatiion Enquiry.";
+                        //  for Agile PMC
 
 
-                        //                        string mailcon = @"<!DOCTYPE html>
-                        //<html>
-                        //<head>
-                        //<title>Reset Password</title>
-                        //<style> 
-                        //.header{text-align:center;}
-                        //.position{text-align: justify;}
-                        //.code{background-color:#ececec;padding:9px;}
-                        //.img-socialmedia{width:24px;}
-                        //.footer{background-color:black;padding-top:3px;padding-bottom:3px;}
-                        //.text{color:white;}
-                        //.text1{border-bottom:1px solid white;color:white;}
-                        //.socialmedia{margin-bottom:35px;}
-                        //</style>
-                        //</head>
-                        //<body class=""header"">
-                        //<img src=""https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/WTMU_Header_logo_eng-V2.png""/>
-                        //<div class=""banner""> 
-                        //<img src=""https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/ResetPasswordBanner.png""/>
-                        //</div>
-                        //<p class=""header"">Reset Password</p>
-                        //<p class=""position"">Hello,</p>
-                        //<p class=""position"">We have sent you this email in response to your request to reset your passsword. Please copy the code and update your password</p>
-                        //<div class=""code""> 
-                        //<h4>code:" + "" + @"</h4>
-                        //</div>
-                        //<p class=""position"">If this email is not intended to you please ignore and delete it.<br>
-                        //Thankyou for understanding.</p>
-                        //<p class=""position"">Thanks and Regards,</p>
-                        //<h5 class=""position"">Tamil Music University Team</h5>
-                        //<div class=""socialmedia"">
-                        //<span>Follow us on: </span>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/FB.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Instagram.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Youtube.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Linkedin.png""/>
-                        //<img class=""img-socialmedia"" src="" https://api.worldtamilmusicuniversity.com/WTMUEmailTemplatesIcon/Twitter.png""/>
-                        //</div>
-                        //<div class=""footer""> 
-                        //<p class=""text1""> Contact us: +1-703-880-6765</p>
-                        //<p class=""text""> Washington DC,Metropolitan Region, USA.</p>
-                        //<p class=""text""> 2023 World Tamil Music University-All Rights Reserved. </p>
-                        //</div>
-                        //</body>
-                        //</html>";
+                        MailMessage mailMsg = new MailMessage();
+                        // From
+                        MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
+                        mailMsg.From = mailAddress;
+                        // Subject and Body
+                        mailMsg.Subject = "New Career Application.";
 
-                        //                        mailMsg.Body = mailcon;
-                        //                        mailMsg.To.Add(request.Email);
-                        //                        //  mailMsg.To.Add("pratheeshbibin1999@gmail.com");
 
-                        //                        mailMsg.IsBodyHtml = true;
-                        //                        SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
-                        //                        System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
-                        //                        emailClient.Credentials = credentials;
-                        //                        emailClient.EnableSsl = true; // Enable SSL for secure communication
-                        //                                                      // Add the following line to enable STARTTLS
-                        //                        emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        string mailcon = @"<!DOCTYPE html>
+                        <html>
+                        <head>
+                        <title>Reset Password</title>
+                        <style> 
+                        .header{text-align:center;}
+                        .position{text-align: justify;}
+                        .code{background-color:#ececec;padding:9px;}
+                        .img-socialmedia{width:24px;}
+                        .footer{background-color:black;padding-top:3px;padding-bottom:3px;}
+                        .text{color:white;}
+                        .text1{border-bottom:1px solid white;color:white;}
+                        .socialmedia{margin-bottom:35px;}
+                        </style>
+                        </head>
+                        <body class=""header"">
+                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <p class=""position"">Dear Agile PMC,</p>
+                        <p class=""position"">        You have received a new  Career apllication with the following details,</p>
+                        <p class=""position"">First Name : " + request.FirstName + @".</p>
+                        <p class=""position"">SurName  : " + request.SurName + @".</p>
+                        <p class=""position"">Applying For : " + request.ApplyingFor + @".</p>
+                        <p class=""position"">Address : " + request.Address + @".</p>
+                        <p class=""position"">Qualification  : " + request.Qualification + @".</p>
+                        <p class=""position"">Experiance in year : " + request.Experiance + @".</p>
+                        <p class=""position"">Phone Number : " + request.PhoneNumber + @".</p>
+                        <p class=""position"">Email Address : " + request.Email + @".</p>
+                        <p class=""position"">Message  : " + request.Message + @".</p>
+                        <br>
+                        <p class=""position"">Regards,</p>
+                        <p  class=""position"">
+                        <a href=https://agilepmc.com/>https://agilepmc.com/>
+                        </p>
+                        </body>
+                        </html>";
 
-                        //                        var Msg = "";
-                        //                        try
-                        //                        {
-                        //                            emailClient.Send(mailMsg);
-                        //                            Msg = "Successs";
-                        //                        }
-                        //                        catch (Exception ex)
-                        //                        {
-                        //                            string register = ex.ToString();
-                        //                            Msg = "Faliure";
-                        //                        }
+                        mailMsg.Body = mailcon;
+                        // mailMsg.To.Add(request.Email);
+                        mailMsg.To.Add("michel.charles@sysmedac.com");
+
+                        mailMsg.IsBodyHtml = true;
+                        SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
+                        System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
+                        emailClient.Credentials = credentials;
+                        emailClient.EnableSsl = true; // Enable SSL for secure communication
+                                                      // Add the following line to enable STARTTLS
+                        emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                        var Msg = "";
+                        try
+                        {
+                            emailClient.Send(mailMsg);
+                            Msg = "Successs";
+                        }
+                        catch (Exception ex)
+                        {
+                            string register = ex.ToString();
+                            Msg = "Faliure";
+                        }
 
                         //                        // for visitors
 
@@ -856,7 +829,7 @@ namespace AgilePMC.Services
 
                         mailMsg1.Body = mailcon1;
                         //  mailMsg1.To.Add(request.Email);
-                        mailMsg1.To.Add("pratheeshbibin1999@gmail.com");
+                        mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg1.IsBodyHtml = true;
                         SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -918,12 +891,78 @@ namespace AgilePMC.Services
                     return responseObj;
                 }
 
+                //  for Agile PMC
+
+
+                MailMessage mailMsg = new MailMessage();
+                // From
+                MailAddress mailAddress = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
+                mailMsg.From = mailAddress;
+                // Subject and Body
+                mailMsg.Subject = "Brochure Download.";
+
+
+                string mailcon = @"<!DOCTYPE html>
+                        <html>
+                        <head>
+                        <title>Reset Password</title>
+                        <style> 
+                        .header{text-align:center;}
+                        .position{text-align: justify;}
+                        .code{background-color:#ececec;padding:9px;}
+                        .img-socialmedia{width:24px;}
+                        .footer{background-color:black;padding-top:3px;padding-bottom:3px;}
+                        .text{color:white;}
+                        .text1{border-bottom:1px solid white;color:white;}
+                        .socialmedia{margin-bottom:35px;}
+                        </style>
+                        </head>
+                        <body class=""header"">
+                        <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
+                        <p class=""position"">Dear Agile PMC,</p>
+                        <p class=""position"">        New brocher download with the following details,</p>
+                        <p class=""position"">Mobile Number : " + request.MobileNumber + @".</p>
+                        <p class=""position"">Email Address : " + request.Email + @".</p>
+                        <br>
+                        <p class=""position"">Regards,</p>
+                        <p  class=""position"">
+                        <a href=https://agilepmc.com/>https://agilepmc.com/>
+                        </p>
+                        </body>
+                        </html>";
+
+                mailMsg.Body = mailcon;
+                // mailMsg.To.Add(request.Email);
+                mailMsg.To.Add("michel.charles@sysmedac.com");
+
+                mailMsg.IsBodyHtml = true;
+                SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
+                System.Net.NetworkCredential credentials = new System.Net.NetworkCredential(smtpCRED.SmtpUserEmail, smtpCRED.SmtpPassword);
+                emailClient.Credentials = credentials;
+                emailClient.EnableSsl = true; // Enable SSL for secure communication
+                                              // Add the following line to enable STARTTLS
+                emailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                var Msg = "";
+                try
+                {
+                    emailClient.Send(mailMsg);
+                    Msg = "Successs";
+                }
+                catch (Exception ex)
+                {
+                    string register = ex.ToString();
+                    Msg = "Faliure";
+                }
+
+                //for visitors
+
                 MailMessage mailMsg1 = new MailMessage();
                 // From
                 MailAddress mailAddress1 = new MailAddress(smtpCRED.SmtpUserEmail, "Agile PMC");
                 mailMsg1.From = mailAddress1;
                 // Subject and Body
-                mailMsg1.Subject = "Thanks  for contacting Agile PMC.";
+                mailMsg1.Subject = "Brochure Download.";
 
                 string mailcon1 = @"<!DOCTYPE html>
 <html>
@@ -943,7 +982,7 @@ namespace AgilePMC.Services
 <body class=""header"">
 <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
 <p class=""position"">Dear " + request.Email + @",</p>
-<p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
+<p class=""position"">Thanks for downloading the Brochure, Please contact us for more details.</p>
 <p class=""position"">Thanks and Regards,</p>
 <h5 class=""position"">Team Agile PMC,</h5>
 <p  class=""position"">
@@ -954,7 +993,7 @@ namespace AgilePMC.Services
 
                 mailMsg1.Body = mailcon1;
                 //  mailMsg1.To.Add(request.Email);
-                mailMsg1.To.Add("pratheeshbibin1999@gmail.com");
+                mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                 mailMsg1.IsBodyHtml = true;
                 SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
