@@ -921,7 +921,7 @@ namespace AgilePMC.Services
                         <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        New brocher download with the following details,</p>
-                        <p class=""position"">Mobile Number : " + request.MobileNumber + @".</p>
+                        <p class=""position"">Name : " + request.Name + @".</p>
                         <p class=""position"">Email Address : " + request.Email + @".</p>
                         <br>
                         <p class=""position"">Regards,</p>
@@ -981,7 +981,7 @@ namespace AgilePMC.Services
 </head>
 <body class=""header"">
 <img src=""http://68.178.168.248:11458/Uploads/agilelogo.png""/>
-<p class=""position"">Dear " + request.Email + @",</p>
+<p class=""position"">Dear " + request.Name + @",</p>
 <p class=""position"">Thanks for downloading the Brochure, Please contact us for more details.</p>
 <p class=""position"">Thanks and Regards,</p>
 <h5 class=""position"">Team Agile PMC,</h5>
