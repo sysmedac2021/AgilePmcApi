@@ -522,8 +522,8 @@ namespace AgilePMC.Services
                         </html>";
 
                         mailMsg.Body = mailcon;
-                       // mailMsg.To.Add(request.Email);
-                          mailMsg.To.Add("michel.charles@sysmedac.com");
+                        mailMsg.To.Add("info@agilepmc.com");
+                        //  mailMsg.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg.IsBodyHtml = true;
                         SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -583,8 +583,8 @@ namespace AgilePMC.Services
 </html>";
 
                         mailMsg1.Body = mailcon1;
-                        //  mailMsg1.To.Add(request.Email);
-                        mailMsg1.To.Add("michel.charles@sysmedac.com");
+                          mailMsg1.To.Add(request.Email);
+                      //  mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg1.IsBodyHtml = true;
                         SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -654,8 +654,8 @@ namespace AgilePMC.Services
                         </html>";
 
                         mailMsg.Body = mailcon;
-                        // mailMsg.To.Add(request.Email);
-                        mailMsg.To.Add("michel.charles@sysmedac.com");
+                         mailMsg.To.Add("info@agilepmc.com");
+                       // mailMsg.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg.IsBodyHtml = true;
                         SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -715,8 +715,8 @@ namespace AgilePMC.Services
 </html>";
 
                         mailMsg1.Body = mailcon1;
-                        //  mailMsg1.To.Add(request.Email);
-                        mailMsg1.To.Add("michel.charles@sysmedac.com");
+                          mailMsg1.To.Add(request.Email);
+                       // mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg1.IsBodyHtml = true;
                         SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -789,8 +789,8 @@ namespace AgilePMC.Services
                         </html>";
 
                         mailMsg.Body = mailcon;
-                        // mailMsg.To.Add(request.Email);
-                        mailMsg.To.Add("michel.charles@sysmedac.com");
+                         mailMsg.To.Add("info@agilepmc.com");
+                       // mailMsg.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg.IsBodyHtml = true;
                         SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -850,8 +850,8 @@ namespace AgilePMC.Services
 </html>";
 
                         mailMsg1.Body = mailcon1;
-                        //  mailMsg1.To.Add(request.Email);
-                        mailMsg1.To.Add("michel.charles@sysmedac.com");
+                          mailMsg1.To.Add("info@agilepmc.com");
+                       // mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                         mailMsg1.IsBodyHtml = true;
                         SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -954,8 +954,8 @@ namespace AgilePMC.Services
                         </html>";
 
                 mailMsg.Body = mailcon;
-                // mailMsg.To.Add(request.Email);
-                mailMsg.To.Add("michel.charles@sysmedac.com");
+                 mailMsg.To.Add("info@agilepmc.com");
+              //  mailMsg.To.Add("michel.charles@sysmedac.com");
 
                 mailMsg.IsBodyHtml = true;
                 SmtpClient emailClient = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
@@ -1014,8 +1014,8 @@ namespace AgilePMC.Services
 </html>";
 
                 mailMsg1.Body = mailcon1;
-                //  mailMsg1.To.Add(request.Email);
-                mailMsg1.To.Add("michel.charles@sysmedac.com");
+                  mailMsg1.To.Add(request.Email);
+               // mailMsg1.To.Add("michel.charles@sysmedac.com");
 
                 mailMsg1.IsBodyHtml = true;
                 SmtpClient emailClient1 = new SmtpClient(smtpCRED.SmtpDomainName, (int)smtpCRED.SmtpPort);
