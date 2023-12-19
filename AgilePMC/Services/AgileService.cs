@@ -501,6 +501,7 @@ namespace AgilePMC.Services
                         </head>
                         <body class=""header"">
                         <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        You have received a new association enquiry with the following details,</p>
                         <p class=""position"">Organization Name : " + request.OrganizationName + @".</p>
@@ -518,6 +519,7 @@ namespace AgilePMC.Services
                         <p  class=""position"">
                         <a href=https://agilepmc.com/>https://agilepmc.com/>
                         </p>
+</div>
                         </body>
                         </html>";
 
@@ -572,6 +574,7 @@ namespace AgilePMC.Services
 </head>
 <body class=""header"">
 <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
 <p class=""position"">Dear " + request.ContactName + @",</p>
 <p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -579,6 +582,7 @@ namespace AgilePMC.Services
 <p  class=""position"">
 <a href=https://agilepmc.com/>https://agilepmc.com/>
 </p>
+</div>
 </body>
 </html>";
 
@@ -639,6 +643,7 @@ namespace AgilePMC.Services
                         </head>
                         <body class=""header"">
                         <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        You have received a new enquiry with the following details,</p>
                         <p class=""position"">Contact Name & Designation : " + request.ContactName + @".</p>
@@ -650,6 +655,7 @@ namespace AgilePMC.Services
                         <p  class=""position"">
                         <a href=https://agilepmc.com/>https://agilepmc.com/>
                         </p>
+</div>
                         </body>
                         </html>";
 
@@ -704,6 +710,7 @@ namespace AgilePMC.Services
 </head>
 <body class=""header"">
 <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
 <p class=""position"">Dear " + request.ContactName + @",</p>
 <p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -711,6 +718,7 @@ namespace AgilePMC.Services
 <p  class=""position"">
 <a href=https://agilepmc.com/>https://agilepmc.com/>
 </p>
+</div>
 </body>
 </html>";
 
@@ -769,6 +777,7 @@ namespace AgilePMC.Services
                         </head>
                         <body class=""header"">
                         <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        You have received a new  Career apllication with the following details,</p>
                         <p class=""position"">First Name : " + request.FirstName + @".</p>
@@ -785,6 +794,7 @@ namespace AgilePMC.Services
                         <p  class=""position"">
                         <a href=https://agilepmc.com/>https://agilepmc.com/>
                         </p>
+</div>
                         </body>
                         </html>";
 
@@ -839,6 +849,7 @@ namespace AgilePMC.Services
 </head>
 <body class=""header"">
 <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
 <p class=""position"">Dear " + request.FirstName + @",</p>
 <p class=""position"">Thanks for contacting Agile PMC, We will contact you soon.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -846,6 +857,7 @@ namespace AgilePMC.Services
 <p  class=""position"">
 <a href=https://agilepmc.com/>https://agilepmc.com/>
 </p>
+</div>
 </body>
 </html>";
 
@@ -941,6 +953,7 @@ namespace AgilePMC.Services
                         </head>
                         <body class=""header"">
                         <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
                         <p class=""position"">Dear Agile PMC,</p>
                         <p class=""position"">        New brocher download with the following details,</p>
                         <p class=""position"">Name : " + request.Name + @".</p>
@@ -950,6 +963,7 @@ namespace AgilePMC.Services
                         <p  class=""position"">
                         <a href=https://agilepmc.com/>https://agilepmc.com/>
                         </p>
+</div>
                         </body>
                         </html>";
 
@@ -1003,6 +1017,7 @@ namespace AgilePMC.Services
 </head>
 <body class=""header"">
 <img src=""https://agileapi.sysmedac.com/Uploads/agilelogo.png""/>
+<div style=""margin-top: 2%>
 <p class=""position"">Dear " + request.Name + @",</p>
 <p class=""position"">Thanks for downloading the Brochure, Please contact us for more details.</p>
 <p class=""position"">Thanks and Regards,</p>
@@ -1010,6 +1025,7 @@ namespace AgilePMC.Services
 <p  class=""position"">
 <a href=https://agilepmc.com/>https://agilepmc.com/>
 </p>
+</div>
 </body>
 </html>";
 
