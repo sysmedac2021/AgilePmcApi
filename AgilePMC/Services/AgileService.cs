@@ -21,32 +21,42 @@ namespace AgilePMC.Services
             {
                 var newsLetter = _db.NewsLetters.ToList();
                 var slider = _db.Sliders.ToList();
-                var contactUs = _db.ContactUs.ToList();
+                var contactUsForAssociation = _db.ContactUs.Where(x => x.ContactUsType == "ForAssociation").ToList();
+                var contactUsForEnquires = _db.ContactUs.Where(x => x.ContactUsType == "ForEnquires").ToList();
+                var contactUsForCareers = _db.ContactUs.Where(x => x.ContactUsType == "ForCareers").ToList();
 
                 if (selectRange != null)
                 {
                      newsLetter = _db.NewsLetters.Where(x => x.CreateAt >= selectRange).ToList();
                      slider = _db.Sliders.Where(x => x.CreateAt >= selectRange).ToList();
-                     contactUs = _db.ContactUs.Where(x => x.CreatedAt >= selectRange).ToList();
+                    contactUsForAssociation = _db.ContactUs.Where(x => x.CreatedAt >= selectRange && x.ContactUsType == "ForAssociation").ToList();
+                    contactUsForEnquires = _db.ContactUs.Where(x => x.CreatedAt >= selectRange && x.ContactUsType == "ForEnquires").ToList();
+                    contactUsForCareers = _db.ContactUs.Where(x => x.CreatedAt >= selectRange && x.ContactUsType == "ForAssociation").ToList();
                 }
                 else if (fromDate != null && toDate != null)
                 {
                      newsLetter = _db.NewsLetters.Where(x => x.CreateAt >= fromDate && x.CreateAt <= toDate).ToList();
                      slider = _db.Sliders.Where(x => x.CreateAt >= fromDate && x.CreateAt <= toDate).ToList();
-                     contactUs = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.CreatedAt <= toDate).ToList();
+                    contactUsForAssociation = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.CreatedAt <= toDate && x.ContactUsType == "ForAssociation").ToList();
+                    contactUsForEnquires = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.CreatedAt <= toDate && x.ContactUsType == "ForEnquires").ToList();
+                    contactUsForCareers = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.CreatedAt <= toDate && x.ContactUsType == "ForCareers").ToList();
                 }
                 else if (fromDate != null)
                 {
                      newsLetter = _db.NewsLetters.Where(x => x.CreateAt >= fromDate).ToList();
                      slider = _db.Sliders.Where(x => x.CreateAt >= fromDate).ToList();
-                     contactUs = _db.ContactUs.Where(x => x.CreatedAt >= fromDate).ToList();
+                    contactUsForAssociation = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.ContactUsType == "ForAssociation").ToList();
+                    contactUsForEnquires = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.ContactUsType == "ForEnquires").ToList();
+                    contactUsForCareers = _db.ContactUs.Where(x => x.CreatedAt >= fromDate && x.ContactUsType == "ForCareers").ToList();
                 }
 
                 var result = new
                 {
                     NewsletterCount = newsLetter.Count > 0 ? newsLetter.Count : 0,
                     SlidersCount = slider.Count > 0 ? slider.Count : 0,
-                    ContactUsCount = contactUs.Count > 0 ? contactUs.Count : 0,
+                    ContactUsCountForAssociation = contactUsForAssociation.Count > 0 ? contactUsForAssociation.Count : 0,
+                    ContactUsCountForEnquires = contactUsForEnquires.Count > 0 ? contactUsForEnquires.Count : 0,
+                    ContactUsCountForCareers = contactUsForCareers.Count > 0 ? contactUsForCareers.Count : 0,
                 };
 
                     responseObj.responseCode = 200;
